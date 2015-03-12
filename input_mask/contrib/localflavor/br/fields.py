@@ -15,5 +15,6 @@ class BRDecimalField(DecimalField):
 
         try:
             value = Decimal(value)
+            return value
         except DecimalException:
             raise ValidationError(self.error_messages['invalid'])
